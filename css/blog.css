@@ -1,0 +1,118 @@
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom, #4A2F1A, #8B4513 30%, #D2B48C 50%, #BC8F8F 70%, #A0522D);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+}
+
+header {
+    background-image: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.linkmenu {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+
+.linkmenu:hover {
+    background-color: #5c799b;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+nav>a {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+nav a:active {
+    background-color: #5c799b;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+nav a:hover {
+    background-color: #5c799b;
+    color: black;
+    border-bottom: 3px solid white;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.myposts {
+    list-style-type: none; /* Remover marcadores de lista */
+    padding: 0;
+}
+
+.myposts li {
+    margin-bottom: 20px; /* Espaçamento entre as postagens */
+    line-height: 1.5; /* Espaçamento de 1,5 entre as linhas */
+    text-align: justify; /* Alinhar o texto justificado */
+}
+
+.myposts a {
+    color: #ffffbf; /* Cor dos links */
+    text-decoration: underline; /* Remover sublinhado dos links */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 24px; /* Tamanho da fonte do título*/
+}
+
+.myposts a:hover {
+    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
+}
+
+/* Estilos para a data e trecho */
+.permalink p {
+    margin: 5px 0;
+}
+
+/* Ajustar a cor do texto e da data para branco */
+.myposts p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.post-title-container {
+    background-color: black; /* Cor de fundo azul */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Borda arredondada */
+    border-color: #fff;
+    display: inline-block; /* Torna o contêiner apenas tão largo quanto o conteúdo */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Estilo para o título do post */
+.post-title {
+    color: #fff; /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Efeito de hover para o título do post */
+.post-title:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

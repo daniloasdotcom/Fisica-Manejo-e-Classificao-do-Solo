@@ -1,0 +1,32 @@
+- label: Home
+  route: /
+
+- label: Blog
+  route: /blog
+
+- label: CronogramaBB
+  route: /cronogramabb1bb2
+
+- label: Lista BB
+  route: /listapresencabb
+
+- label: Conteudo BB
+  route: /conteudobb
+
+- label: CronogramaBL
+  route: /cronogramabl
+
+- label: CronogramaFA01
+  route: /cronogramafa01
+
+- label: Quiz
+  route: /quiz
+
+- label: Como Estudo
+  route: /comoestudo
+
+- label: Glicolise
+  route: /glicolise
+  
+# - label: Portfolio
+#   route: /port
