@@ -4,274 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{"css/style.css" | relative_url}}" rel="stylesheet">
     <title>Grid Clicável</title>
     <style>
-        /* Estilizando a parte superior da página */
-        header {
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Estilizando o grid em duas colunas */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 60px;
-            /* Aumentando o espaçamento entre os blocos */
-            max-width: 900px;
-            /* Aumentando a largura do grid */
-            margin: 30px auto;
-            /* Adicionando espaço na parte superior */
-        }
-
-        /* Estilizando os blocos com bordas arredondadas */
-        .grid-item {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border-radius: 15px;
-            /* Adicionando bordas arredondadas */
-            height: 150px;
-            width: 100%;
-            /* Fazendo com que os blocos ocupem toda a largura da coluna */
-            display: flex;
-            /* Usando flexbox para centralizar */
-            flex-direction: column;
-            /* Alinhando verticalmente */
-            align-items: center;
-            /* Centralizando na horizontal */
-            justify-content: center;
-            /* Centralizando na vertical */
-        }
-
-        /* Mudando a cor quando o mouse passa sobre o item */
-        .grid-item:hover {
-            background-color: #2980b9;
-        }
-
-        /* Estilize o vídeo de fundo */
-        .video-header {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        video#header-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        /* Estilize o conteúdo do cabeçalho (por exemplo, texto e botões) */
-        .header-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: #fff;
-            padding: 100px 0;
-        }
-
-        .linkmenu {
-            background-color: transparent;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition-duration: 1s;
-        }
-
-        .linkmenu:hover {
-            background-color: #5c799b;
-            color: black;
-            border-bottom: 3px solid white;
-        }
-
-        .collapsiblemenu {
-            background-color: #5c799b80;
-            font-family: "Times New Roman", Times, serif;
-            font-weight: bold;
-            color: black;
-            cursor: pointer;
-            padding: 0px;
-            width: 100%;
-            border: none;
-            text-align: center;
-            outline: none;
-            font-size: 18px;
-            color: white;
-            line-height: 2.0;
-        }
-
-        .content {
-            padding: 0 18px;
-            color: black;
-            display: none;
-            overflow: hidden;
-            background-color: #f1f1f1;
-        }
-
-        .contentmenu {
-            padding: 0 0px;
-            color: black;
-            display: none;
-            overflow: hidden;
-            background-color: transparent;
-        }
-
-        nav>a {
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition-duration: 1s;
-        }
-
-        nav a:active {
-            background-color: #5c799b;
-            color: black;
-            border-bottom: 3px solid white;
-        }
-
-        nav a:hover {
-            background-color: #5c799b;
-            color: black;
-            border-bottom: 3px solid white;
-        }
+        
     </style>
 </head>
 
 <body>
-    <header class="video-header">
-        <video autoplay muted loop id="header-video">
-            <source src="./assets/video.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeos HTML5.
-        </video>
-        <div class="header-content">
-            <h1 style="color: white">BioQuímica - Professor Danilo</h1>
-            <hr color="white" size="1" width="80%" align="center" noshade>
-            <nav>
-                <a class="linkmenu" href={{ site.data.routes[0].route }}>HOME</a>
-            </nav>
-            <div style="padding-bottom: 10px;"></div>
-            <nav>
-                <a class="linkmenu" href={{ site.data.routes[1].route }}>BLOG</a>
-            </nav>
-            <div style="padding-bottom: 10px;"></div>
-            <button type="button" class="collapsiblemenu">MENU BB1/BB2</button>
-            <div class="contentmenu">
-                <nav>
-                    <a href={{ site.data.routes[2].route }}>CRONOGRAMA - BB1/BB2</a>
-                </nav>
-                <nav>
-                    <a href={{ site.data.routes[3].route }}>LISTA DE PRESENÇA</a>
-                </nav>
-                <nav>
-                    <a href={{ site.data.routes[4].route }}>CONTEÚDO BB1/BB2</a>
-                </nav>
-            </div>
-            <div style="padding-bottom: 10px;"></div>
-            <button type="button" class="collapsiblemenu">MENU BL1</button>
-            <div class="contentmenu">
-                <nav>
-                    <a href={{ site.data.routes[5].route }}>CRONOGRAMA - BL1</a>
-                </nav>
-            </div>
-            <div style="padding-bottom: 10px;"></div>
-            <button type="button" class="collapsiblemenu">MENU FA01</button>
-            <div class="contentmenu">
-                <nav>
-                    <a href={{ site.data.routes[6].route }}>CRONOGRAMA</a>
-                </nav>
-            </div>
-            <div style="padding-bottom: 10px;"></div>
-            <button type="button" class="collapsiblemenu">QUIZ E TESTES</button>
-            <div class="contentmenu">
-                <nav>
-                    <a href={{ site.data.routes[7].route }}>QUIZ</a>
-                </nav>
-                <nav>
-                    <a href={{ site.data.routes[8].route }}>TESTE DE APRENDIZAGEM</a>
-                </nav>
+    <video autoplay muted loop id="header-video">
+        <source src="./assets/video.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos HTML5.
+    </video>
+    <div class="content">
+        <h1>BioQuímica - Professor Danilo</h1>
+        <div class="grid-container">
+            <!-- Os blocos clicáveis aqui permanecem os mesmos como no exemplo anterior -->
+            <!-- Bloco 1 - Redireciona para o Google -->
+            <div class="grid-item" onclick="window.location.href='https://www.google.com/'">
+                Manejo e Conservação do Solo
             </div>
 
-            <hr color="white" size="1" width="80%" align="center" noshade>
-        </div>
-    </header>
-    <div class="grid-container">
-        <!-- Os blocos clicáveis aqui permanecem os mesmos como no exemplo anterior -->
-        <!-- Bloco 1 - Redireciona para o Google -->
-        <div class="grid-item" onclick="window.location.href='https://www.google.com/'">
-            Clique para ir ao Google
-        </div>
+            <!-- Bloco 2 - Redireciona para o Yahoo -->
+            <div class="grid-item" onclick="window.location.href='https://www.yahoo.com/'">
+                Fisica do Solo
+            </div>
 
-        <!-- Bloco 2 - Redireciona para o Yahoo -->
-        <div class="grid-item" onclick="window.location.href='https://www.yahoo.com/'">
-            Clique para ir ao Yahoo
+            <!-- Bloco 3 - Redireciona para o Bing -->
+            <div class="grid-item" onclick="window.location.href='https://www.bing.com/'">
+                Classificação do Solo
+            </div>
         </div>
+        
+        <h1>Postagens Recentes</h1>
 
-        <!-- Bloco 3 - Redireciona para o Bing -->
-        <div class="grid-item" onclick="window.location.href='https://www.bing.com/'">
-            Clique para ir ao Bing
-        </div>
+        <div class="grid-container">
+            <div class="grid-item" onclick="window.location.href='{{ site.baseurl }}{{ site.posts[0].url }}'">
+                {{ site.posts[0].title }}
+            </div>
 
-        <!-- Bloco 4 - Redireciona para o OpenAI -->
-        <div class="grid-item" onclick="window.location.href='https://www.openai.com/'">
-            Clique para ir à OpenAI
-        </div>
-
-        <!-- Bloco 5 - Redireciona para o GitHub -->
-        <div class="grid-item" onclick="window.location.href='https://github.com/'">
-            Clique para ir ao GitHub
-        </div>
-
-        <!-- Bloco 6 - Redireciona para o Stack Overflow -->
-        <div class="grid-item" onclick="window.location.href='https://stackoverflow.com/'">
-            Clique para ir ao Stack Overflow
-        </div>
-
-        <!-- Bloco 7 - Redireciona para o Facebook -->
-        <div class="grid-item" onclick="window.location.href='https://www.facebook.com/'">
-            Clique para ir ao Facebook
-        </div>
-
-        <!-- Bloco 8 - Redireciona para o Twitter -->
-        <div class="grid-item" onclick="window.location.href='https://twitter.com/'">
-            Clique para ir ao Twitter
-        </div>
-
-        <!-- Bloco 9 - Redireciona para o LinkedIn -->
-        <div class="grid-item" onclick="window.location.href='blog.html'">
-            Clique para ir ao blog
+            
         </div>
     </div>
-    <script>
-        var coll = document.getElementsByClassName("collapsiblemenu");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>
