@@ -37,11 +37,23 @@ body {
 }
 
 .signature {
-    text-align: center;
-    text-align: right;
+    text-align: right;/* Fonte elegante que lembra uma assinatura. */
+}
+
+.signature p {
     font-size: 1.2em;
+    margin-top: 60px;/* Fonte elegante que lembra uma assinatura. */
+    
+}
+
+.signature p a{
+    font-size: 1.0em;
     margin-top: 60px; /* Espaçamento superior aumentado para a assinatura. */
-    font-family: 'Pacifico', cursive; /* Fonte elegante que lembra uma assinatura. */
+    font-family: 'Pacifico', cursive;/* Adiciona transição suave para a cor da fonte. */    
+}
+
+.signature p a:hover {
+    color: #FFD700; /* Cor da fonte ao passar o mouse (tom amarelado). */
 }
 
 /* */
