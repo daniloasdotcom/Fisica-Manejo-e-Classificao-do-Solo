@@ -7,44 +7,22 @@
     <link href="{{"css/style.css" | relative_url}}" rel="stylesheet">
     <title>Grid Clicável</title>
     <style>
-        
+
     </style>
 </head>
 
 <body>
-    <video autoplay muted loop id="header-video">
-        <source src="./assets/pexels_videos_2468414 (2160p).mp4" type="video/mp4">
-    </video>
-    <div class="content">
-        <h1>BioQuímica - Professor Danilo</h1>
-        <div class="grid-container">
-            <!-- Os blocos clicáveis aqui permanecem os mesmos como no exemplo anterior -->
-            <!-- Bloco 1 - Redireciona para o Google -->
-            <div class="grid-item" onclick="window.location.href='https://www.google.com/'">
-                Manejo e Conservação do Solo
-            </div>
-
-            <!-- Bloco 2 - Redireciona para o Yahoo -->
-            <div class="grid-item" onclick="window.location.href='https://www.yahoo.com/'">
-                Fisica do Solo
-            </div>
-
-            <!-- Bloco 3 - Redireciona para o Bing -->
-            <div class="grid-item" onclick="window.location.href='https://www.bing.com/'">
-                Classificação do Solo
-            </div>
-        </div>
-        
-        <h1>Postagens Recentes</h1>
-
-        <div class="grid-container">
-            <div class="grid-item" onclick="window.location.href='{{ site.baseurl }}{{ site.posts[0].url }}'">
-                {{ site.posts[0].title }}
-            </div>
-
-            
+    <div class="header">
+        <p><a href={{ site.data.routes[1].route }}>Física,</a></p>
+        <p><a href="link_para_disciplina_2">Manejo e</a></p>
+        <p><a href="link_para_disciplina_3">Classificação do Solo</a></p>
+        <div class="signature">
+            Por Professor Danilo Andrade
         </div>
     </div>
+    
+    
 </body>
 
 </html>
+

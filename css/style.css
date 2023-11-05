@@ -1,63 +1,89 @@
 @charset "UTF-8";
 
-/* Novos códigos */
 body {
     margin: 0;
     padding: 0;
-}
-
-/* Estilizando o vídeo de fundo */
-video#header-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* Estilizando o conteúdo da página */
-.content {
-    padding: 100px;
-    text-align: center;
-    color: white;
-    /* Posicione o conteúdo abaixo do vídeo */
-    position: relative;
-    z-index: 1;
-}
-
-/* Estilizando o grid em duas colunas */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px;
-    max-width: 900px;
-    margin: 30px auto;
-}
-
-/* Estilizando os blocos com bordas arredondadas */
-.grid-item {
-    background-color: #3498db;
+    font-family: Arial, sans-serif;
+    background: #000;
     color: #fff;
-    text-align: center;
-    padding: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 15px;
-    height: 150px;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Mudando a cor quando o mouse passa sobre o item */
-.grid-item:hover {
-    background-color: #2980b9;
+.header {
+    text-align: left; /* Alinhe o texto à esquerda. */
+}
+
+.header p {
+    font-size: 3em;
+    margin: 0;
+}
+
+.header p a {
+    color: #fff; /* Cor da fonte padrão. */
+    font-family: 'Georgia', serif; /* Fonte elegante para os links. */
+    text-decoration: none; /* Remove sublinhado dos links. */
+    transition: color 0.3s; /* Adiciona transição suave para a cor da fonte. */
+}
+
+.header p a:hover {
+    color: #FFD700; /* Cor da fonte ao passar o mouse (tom amarelado). */
+}
+
+.header p + p {
+    margin-top: 0.2em; /* Espaçamento entre os parágrafos. Ajuste conforme necessário. */
+}
+
+.signature {
+    text-align: center;
+    text-align: right;
+    font-size: 1.2em;
+    margin-top: 60px; /* Espaçamento superior aumentado para a assinatura. */
+    font-family: 'Pacifico', cursive; /* Fonte elegante que lembra uma assinatura. */
 }
 
 /* */
 
 /* */
+
+.collapsible-conteudo {
+    background-color: rgb(167, 151, 13);
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    color: black;
+    line-height: 2.0;
+    border-top-left-radius: 10px;
+    /* Arredonda o canto superior esquerdo */
+    border-top-right-radius: 10px;
+    /* Arredonda o canto superior direito */
+}
+
+.active,
+.collapsible-conteudo:hover {
+    background-color: #5c799b;
+    color: white;
+}
+
+
+.content {
+    padding: 0 18px;
+    color: black;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+div.margem {
+    margin-left: 5%;
+    margin-right: 5%;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+</html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bioquímica</title>
+    <script src="./main.js"></script>
+    <style>
+        body {
+            background-color: #000; /* Define o fundo da página como preto. */
+            color: #fff; /* Define a cor padrão do texto como branco. */
+        }
+        .collapsible-conteudo {
+            background-color: rgb(167, 151, 13);
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            color: black;
+            line-height: 2.0;
+            border-top-left-radius: 10px;
+            /* Arredonda o canto superior esquerdo */
+            border-top-right-radius: 10px;
+            /* Arredonda o canto superior direito */
+        }
+
+        .active,
+        .collapsible-conteudo:hover {
+            background-color: #5c799b;
+            color: white;
+        }
+
+
+        .content {
+            padding: 0 18px;
+            color: black;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        div.margem {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 60px; /* Espaçamento superior para centralizar o botão. */
+            margin-bottom: 60px;
+        }
+
+        .custom-button {
+            background-color: #000; /* Cor de fundo escura. */
+            color: white; /* Cor do texto. */
+            padding: 10px 20px;
+            border: 2px solid white; /* Contorno branco. */
+            border-radius: 5px;
+            text-decoration: none; /* Remove sublinhado. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="margem" align="justify">
+        <br></br>
+        <br></br>
+        <br></br>
+        <center>
+            <h1 style="color: white">Física do Solo</h1>
+        </center>
+        <div class="button-container">
+            <a href={{ site.data.routes[0].route }} class="custom-button">Voltar à Página Inicial</a>
+        </div>
+        <br></br>
+        <button type="button" class="collapsible-conteudo">O Método Científico <i class="fa fa-folder-open"></i></button>
+        <div class="content">
+            <h2 style="color: black">Material complementar<i class="fa fa-book"></i></h2>
+            <h1>O Método Científico</h1>
+            <p style="line-height: 1.5; font-size: 18px">O método científico é um processo sistemático utilizado pelos
+                cientistas para investigar e entender o mundo ao nosso redor. Ele é composto por várias etapas
+                interconectadas que ajudam a garantir que as conclusões obtidas sejam confiáveis e baseadas em
+                evidências.</p>
+
+            <h2 style="color: black">Etapas do Método Científico:</h2>
+            <ol>
+                <li><strong>Observação:</strong> Começa com a observação de um fenômeno ou problema.</li>
+                <li><strong>Pergunta:</strong> Formula-se uma pergunta específica com base na observação.</li>
+                <li><strong>Hipótese:</strong> Propõe-se uma hipótese, uma explicação testável para a pergunta.</li>
+                <li><strong>Experimentação:</strong> Realizam-se experimentos controlados para testar a hipótese.</li>
+                <li><strong>Coleta de Dados:</strong> Registra-se e analisa-se os dados resultantes dos experimentos.
+                </li>
+                <li><strong>Conclusões:</strong> Chega-se a conclusões com base nos dados coletados.</li>
+                <li><strong>Comunicação:</strong> Os resultados são comunicados à comunidade científica e ao público.
+                </li>
+            </ol>
+
+            <h2 style="color: black">Características Importantes:</h2>
+            <ul>
+                <li>O método científico é baseado em evidências empíricas.</li>
+                <li>É um processo contínuo e auto-corretivo.</li>
+                <li>A hipótese pode ser aceita ou rejeitada com base nos resultados dos experimentos.</li>
+                <li>Contribui para a acumulação do conhecimento científico.</li>
+            </ul>
+
+            <p style="line-height: 1.5; font-size: 18px">O método científico é uma ferramenta essencial para a
+                descoberta e compreensão da natureza, permitindo que os cientistas investiguem questões complexas e
+                desenvolvam teorias confiáveis.</p>
+        </div>
+        <br></br>
+        
+        <script>
+            var coll = document.getElementsByClassName("collapsible-conteudo");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+</body>
+
+</html>

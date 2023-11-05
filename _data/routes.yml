@@ -1,0 +1,14 @@
+- label: Home
+  route: /
+
+# Item 01
+- label: Física do Solo
+  route: /fisicadosolo
+
+# Item 02
+- label: Lista BL
+  route: /manejodosolo
+  
+# Item 03
+- label: Lista BL
+  route: /classificacaodosolo
