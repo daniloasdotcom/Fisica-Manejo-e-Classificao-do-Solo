@@ -99,3 +99,42 @@ div.margem {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+div.socialmidia {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 10%;    
+    align-items: right;
+}
+
+.fa {
+    padding: 1px;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    color: white;
+}
+
+.fa-youtube {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+}
+
+.fa-github {
+    color: white;
+}
+
+.fa-globe {
+    color: white;
+}
