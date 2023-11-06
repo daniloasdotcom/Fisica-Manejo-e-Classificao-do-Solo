@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
+    background: #687259;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,18 +22,64 @@ body {
 }
 
 .header p a {
-    color: #fff; /* Cor da fonte padrão. */
+    color: black; /* Cor da fonte padrão. */
     font-family: 'Georgia', serif; /* Fonte elegante para os links. */
     text-decoration: none; /* Remove sublinhado dos links. */
     transition: color 0.3s; /* Adiciona transição suave para a cor da fonte. */
 }
 
 .header p a:hover {
-    color: #FFD700; /* Cor da fonte ao passar o mouse (tom amarelado). */
+    color: black; /* Cor da fonte ao passar o mouse (tom amarelado). */
 }
 
 .header p + p {
     margin-top: 0.2em; /* Espaçamento entre os parágrafos. Ajuste conforme necessário. */
+}
+
+/* Estilos para o botão dropdown */
+.collapsible {
+    color: white; /* Cor da fonte padrão. */
+    font-family: 'Georgia', serif; /* Fonte elegante para os links. */
+    text-decoration: none; /* Remove sublinhado dos links. */
+    transition: color 0.3s; /* Adiciona transição suave para a cor da fonte. */
+    cursor: pointer;
+}
+
+.collapsible:hover{
+    color: black; /* Cor da fonte padrão. */
+    font-family: 'Georgia', serif; /* Fonte elegante para os links. */
+    text-decoration: none; /* Remove sublinhado dos links. */
+    transition: color 0.3s; /* Adiciona transição suave para a cor da fonte. */
+    cursor: pointer;
+}
+
+
+.collapsible-content {
+    display: none;
+}
+
+.collapsible-content nav {
+    background-color: #687259;
+    padding: 10px;
+    margin:0px 0;
+    font-family: 'Georgia', serif; /* Fonte elegante para os links. */
+}
+
+.collapsible-content a {
+    color: white;
+    text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+}
+
+.collapsible-content a:hover {
+    color: black; /* Cor da fonte ao passar o mouse (tom amarelado). */
+}
+
+.active {
+    display: block;
+}
+
+.active {
+    display: block;
 }
 
 .signature {
@@ -53,12 +99,52 @@ body {
 }
 
 .signature p a:hover {
-    color: #FFD700; /* Cor da fonte ao passar o mouse (tom amarelado). */
+    color: white; /* Cor da fonte ao passar o mouse (tom amarelado). */
 }
 
+
+div.socialmidia {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 10%;    
+    align-items: right;
+}
+
+.fa {
+    padding: 0px;
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 1.0;
+    color: white;
+}
+
+.fa-linkedin {
+    color: black;
+}
+
+.fa-youtube {
+    color: black;
+}
+
+.fa-instagram {
+    color: black;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-globe {
+    color: black;
+}
 /* */
 
-/* */
+/* Para o menu de conteúdo das disciplinas */
 
 .collapsible-conteudo {
     background-color: rgb(167, 151, 13);
@@ -98,43 +184,4 @@ body {
 div.margem {
     margin-left: 5%;
     margin-right: 5%;
-}
-
-div.socialmidia {
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 10%;    
-    align-items: right;
-}
-
-.fa {
-    padding: 1px;
-    font-size: 20px;
-    width: 60px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-linkedin {
-    color: white;
-}
-
-.fa-youtube {
-    color: white;
-}
-
-.fa-instagram {
-    color: white;
-}
-
-.fa-github {
-    color: white;
-}
-
-.fa-globe {
-    color: white;
 }

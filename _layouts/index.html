@@ -8,30 +8,66 @@
     <link href="{{"css/style.css" | relative_url}}" rel="stylesheet">
     <title>Grid Clicável</title>
     <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
 
+        .post {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <p><a href={{ site.data.routes[1].route }}>Física,</a></p>
-        <p><a href="link_para_disciplina_2">Manejo e</a></p>
-        <p><a href="link_para_disciplina_3">Classificação do Solo</a></p>
+        <p><span class="collapsible" onclick="toggleCollapsible('fisica')">Física,</span></p>
+        <div id="fisica-collapsible" class="collapsible-content">
+            <nav><a href={{ site.data.routes[1].route }}>Conteúdo</a></nav>
+            <nav><a href="link2_para_fisica">Lista de Presença</a></nav>
+            <nav><a href="link3_para_fisica">Notas</a></nav>
+        </div>
+
+        <p><span class="collapsible" onclick="toggleCollapsible('manejo')">Manejo e</span></p>
+        <div id="manejo-collapsible" class="collapsible-content">
+            <nav><a href="link1_para_fisica">Opção 1</a></nav>
+            <nav><a href="link2_para_fisica">Opção 2</a></nav>
+            <nav><a href="link3_para_fisica">Opção 3</a></nav>
+        </div>
+
+        <p><span class="collapsible" onclick="toggleCollapsible('classificacao')">Classificação do Solo</span></p>
+        <div id="classificacao-collapsible" class="collapsible-content">
+            <nav><a href="link1_para_fisica">Opção 1</a></nav>
+            <nav><a href="link2_para_fisica">Opção 2</a></nav>
+            <nav><a href="link3_para_fisica">Opção 3</a></nav>
+            
+        </div>
+
         <div class="signature">
             <p><a href="https://daniloas.com">Por Professor Danilo Andrade</a></p>
             <div class="socialmidia">
                 <a href="https://www.instagram.com/daniloas.com_/" class="fa fa-instagram"></a>
                 <a href="https://www.linkedin.com/in/daniloandradesantos/" class="fa fa-linkedin"></a>
-                <a href="https://github.com/daniloasdotcom" class="fa fa-github" style="color:white"></a>
-                <a href="https://daniloas.com/" class="fa fa-globe" style="color:white"></a>
+                <a href="https://github.com/daniloasdotcom" class="fa fa-github"></a>
+                <a href="https://daniloas.com/" class="fa fa-globe"></a>
                 <!-- Adicione mais redes sociais aqui, se desejar -->
             </div>
         </div>
-        
-    </div>
-    
-    
+        <br></br>        
+    </div>    
+    <script>
+        // Função para mostrar/ocultar o collapsible menu
+        function toggleCollapsible(collapsibleId) {
+            const collapsible = document.getElementById(collapsibleId + '-collapsible');
+            collapsible.classList.toggle('active');
+        }
+        function redirecionarParaURL(url) {
+			window.location.href = url;
+		}
+    </script>
 </body>
-
 </html>
 
