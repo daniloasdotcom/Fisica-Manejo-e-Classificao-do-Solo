@@ -19,6 +19,8 @@ body {
 .header p {
     font-size: 3em;
     margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .header p a {
@@ -60,7 +62,9 @@ body {
 
 .collapsible-content nav {
     background-color: #687259;
-    padding: 10px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin:0px 0;
     font-family: 'Georgia', serif; /* Fonte elegante para os links. */
 }
@@ -71,7 +75,7 @@ body {
 }
 
 .collapsible-content a:hover {
-    color: black; /* Cor da fonte ao passar o mouse (tom amarelado). */
+    color: rgb(17, 8, 8); /* Cor da fonte ao passar o mouse (tom amarelado). */
 }
 
 .active {
@@ -113,9 +117,11 @@ div.socialmidia {
 .fa {
     padding: 0px;
     font-size: 25px;
-    width: 40px;
-    text-align: center;
+    width: 20px;
+    text-align: right;
     text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .fa:hover {
