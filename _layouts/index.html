@@ -8,17 +8,6 @@
     <link href="{{"css/style.css" | relative_url}}" rel="stylesheet">
     <title>Grid Clicável</title>
     <style>
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
-        }
-
-        .post {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
     </style>
 </head>
 
@@ -64,9 +53,7 @@
             const collapsible = document.getElementById(collapsibleId + '-collapsible');
             collapsible.classList.toggle('active');
         }
-        function redirecionarParaURL(url) {
-			window.location.href = url;
-		}
+        
     </script>
 </body>
 </html>

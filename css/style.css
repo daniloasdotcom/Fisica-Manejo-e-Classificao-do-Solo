@@ -57,6 +57,9 @@ body {
 
 
 .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease-in-out;
     display: none;
 }
 
@@ -77,6 +80,10 @@ body {
 .collapsible-content a:hover {
     color: rgb(17, 8, 8); /* Cor da fonte ao passar o mouse (tom amarelado). */
 }
+
+.collapsible-content.active {
+    max-height: 200px; /* Ajuste conforme necessário para a altura desejada */
+  }
 
 .active {
     display: block;
