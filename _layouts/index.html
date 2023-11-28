@@ -7,46 +7,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{"css/style.css" | relative_url}}" rel="stylesheet">
     <title>Grid Clicável</title>
-    <style>
-    </style>
 </head>
 
 <body>
-    <div class="header">
-        <p><span class="collapsible" onclick="toggleCollapsible('fisica')">Física,</span></p>
-        <div id="fisica-collapsible" class="collapsible-content">
-            <nav><a href={{ site.data.routes[1].route }}>Conteúdo</a></nav>
-            <nav><a href="link2_para_fisica">Lista de Presença</a></nav>
-            <nav><a href="link3_para_fisica">Notas</a></nav>
-        </div>
-
-        <p><span class="collapsible" onclick="toggleCollapsible('manejo')">Classificação e</span></p>
-        <div id="manejo-collapsible" class="collapsible-content">
-            <nav><a href="link1_para_fisica">Opção 1</a></nav>
-            <nav><a href="link2_para_fisica">Opção 2</a></nav>
-            <nav><a href="link3_para_fisica">Opção 3</a></nav>
-        </div>
-
-        <p><span class="collapsible" onclick="toggleCollapsible('classificacao')">Manejo de Solos</span></p>
-        <div id="classificacao-collapsible" class="collapsible-content">
-            <nav><a href="link1_para_fisica">Opção 1</a></nav>
-            <nav><a href="link2_para_fisica">Opção 2</a></nav>
-            <nav><a href="link3_para_fisica">Opção 3</a></nav>
-            
-        </div>
-
-        <div class="signature">
-            <p><a href="https://daniloas.com">Por Professor Danilo Andrade</a></p>
-            <div class="socialmidia">
-                <a href="https://www.instagram.com/daniloas.com_/" class="fa fa-instagram"></a>
-                <a href="https://www.linkedin.com/in/daniloandradesantos/" class="fa fa-linkedin"></a>
-                <a href="https://github.com/daniloasdotcom" class="fa fa-github"></a>
-                <a href="https://daniloas.com/" class="fa fa-globe"></a>
-                <!-- Adicione mais redes sociais aqui, se desejar -->
+    <main>
+        <div class="nucleo">
+            <p><span class="collapsible" onclick="toggleCollapsible('fisica')">Física,</span></p>
+            <div id="fisica-collapsible" class="collapsible-content">
+                <nav><a href={{ site.data.routes[1].route }}>Conteúdo</a></nav>
+                <nav><a href="link2_para_fisica">Lista de Presença</a></nav>
+                <nav><a href="link3_para_fisica">Notas</a></nav>
             </div>
+            <p><span class="collapsible" onclick="toggleCollapsible('manejo')">Classificação e</span></p>
+            <div id="manejo-collapsible" class="collapsible-content">
+                <nav><a href="link1_para_fisica">Opção 1</a></nav>
+                <nav><a href="link2_para_fisica">Opção 2</a></nav>
+                <nav><a href="link3_para_fisica">Opção 3</a></nav>
+            </div>
+
+            <p><span class="collapsible" onclick="toggleCollapsible('classificacao')">Manejo de Solos</span></p>
+            <div id="classificacao-collapsible" class="collapsible-content">
+                <nav><a href="link1_para_fisica">Opção 1</a></nav>
+                <nav><a href="link2_para_fisica">Opção 2</a></nav>
+                <nav><a href="link3_para_fisica">Opção 3</a></nav>                
+            </div>
+            <div class="signature">
+                <p><a href="https://daniloas.com">Por Professor Danilo Andrade</a></p>
+                <div class="socialmidia">
+                    <a href="https://www.instagram.com/daniloas.com_/" class="fa fa-instagram"></a>
+                    <a href="https://www.linkedin.com/in/daniloandradesantos/" class="fa fa-linkedin"></a>
+                    <a href="https://github.com/daniloasdotcom" class="fa fa-github"></a>
+                    <a href="https://daniloas.com/" class="fa fa-globe"></a>
+                    <!-- Adicione mais redes sociais aqui, se desejar -->
+                </div>
+            </div>
+            <!-- Contêiner dinâmico para postagens do blog -->
+            <div class="blog-container">
+                {% for post in site.posts limit:2 %}
+                <div class="blog-post">
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <p>{{ post.excerpt }}</p> <!-- Adiciona o resumo do post -->
+                </div>
+                {% endfor %}
+            </div>      
         </div>
-        <br></br>        
-    </div>    
+    </main>    
     <script>
         // Função para mostrar/ocultar o collapsible menu
         function toggleCollapsible(collapsibleId) {

@@ -12,29 +12,36 @@ body {
     height: 100vh;
 }
 
-.header {
+header {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.nucleo {
     text-align: left; /* Alinhe o texto à esquerda. */
 }
 
-.header p {
+.nucleo p {
     font-size: 3em;
     margin: 0;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.header p a {
+.nucleo p a {
     color: black; /* Cor da fonte padrão. */
     font-family: 'Georgia', serif; /* Fonte elegante para os links. */
     text-decoration: none; /* Remove sublinhado dos links. */
     transition: color 0.3s; /* Adiciona transição suave para a cor da fonte. */
 }
 
-.header p a:hover {
+.nucleo p a:hover {
     color: black; /* Cor da fonte ao passar o mouse (tom amarelado). */
 }
 
-.header p + p {
+.nucleo p + p {
     margin-top: 0.2em; /* Espaçamento entre os parágrafos. Ajuste conforme necessário. */
 }
 
@@ -166,6 +173,7 @@ div.socialmidia {
     color: black;
     cursor: pointer;
     padding: 18px;
+    display: none; 
     width: 100%;
     border: none;
     text-align: left;
@@ -197,4 +205,39 @@ div.socialmidia {
 div.margem {
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.top-space {
+    height: 200px;
+    margin-top: 200px; /* Altura fixa do espaço desejado */
+    background-color: #fff; /* Cor de fundo (pode ser transparente) */
+}
+
+/* Adicione estilos conforme necessário */
+.blog-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    display: inline-block;
+    background-color: #687259;
+    padding: 0px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 200px; /* Largura fixa para o contêiner */
+    text-align: left;
+}
+
+.blog-post a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Georgia', serif; 
+}
+
+.blog-post p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Georgia', serif; 
 }
