@@ -13,7 +13,7 @@ body {
 }
 
 /* Estilos para dispositivos móveis com largura de tela menor que 600 pixels */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     body {
         margin-top: 120px; /* Por exemplo, uma margem menor para dispositivos móveis */
     }
