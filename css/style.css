@@ -12,13 +12,6 @@ body {
     height: 100vh;
 }
 
-header {
-    background-color: #333;
-    padding: 10px;
-    color: white;
-    text-align: center;
-}
-
 .nucleo {
     text-align: left; /* Alinhe o texto à esquerda. */
 }
