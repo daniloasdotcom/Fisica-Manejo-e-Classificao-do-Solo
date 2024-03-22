@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    margin: 0;
+    margin-top: 50px;
     padding: 0;
     font-family: Arial, sans-serif;
     background: #687259;
@@ -10,6 +10,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+/* Estilos para dispositivos móveis com largura de tela menor que 600 pixels */
+@media screen and (max-width: 600px) {
+    body {
+        margin-top: 120px; /* Por exemplo, uma margem menor para dispositivos móveis */
+    }
 }
 
 .nucleo {
@@ -57,6 +64,7 @@ body {
 
 
 .collapsible-content {
+    margin-top: 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 1.5s ease-in-out;
